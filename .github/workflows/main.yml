@@ -1,0 +1,10 @@
+name: 查看STOCK_LIST原有值
+on: workflow_dispatch  # 手动运行
+
+jobs:
+  show-secret:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 打印原有股票列表
+        run: |
+          echo "原有 STOCK_LIST = ${{ secrets.STOCK_LIST }}"
